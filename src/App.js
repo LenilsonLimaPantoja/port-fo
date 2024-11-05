@@ -1,23 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import { FaGithub, FaLinkedinIn, FaWhatsapp, FaInstagram } from "react-icons/fa";
+import { SlArrowDown } from "react-icons/sl";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <section className='home'>
+        <div className='home-container'>
+          <h1>Olá, eu sou a Meguinha Fox</h1>
+          <p>Transformo projetos em soluções digitais únicas.</p>
+          <div className='btns'>
+            <button>SHOW PROFILE</button>
+            <button>KNOW MORE</button>
+          </div>
+          <div className='btns-links'>
+            <button style={{backgroundColor: '#1f2328'}}>
+              <FaGithub />
+            </button>
+            <button style={{backgroundColor: '#0a66c2'}}>
+              <FaLinkedinIn />
+            </button>
+            <button style={{backgroundColor: '#008069'}}>
+              <FaWhatsapp />
+            </button>
+            <button style={{backgroundColor: '#f60161'}}>
+              <FaInstagram />
+            </button>
+          </div>
+          <SlArrowDown className='arrow-bottom'/>
+        </div>
+      </section>
     </div>
   );
 }
