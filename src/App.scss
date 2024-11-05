@@ -87,13 +87,20 @@
         border-radius: 3px;
         cursor: pointer;
         transition: .3s ease-in-out;
-
+        animation-name: button;
+        animation-duration: 1.5s;
+        animation-fill-mode: forwards;
         &:hover {
           opacity: .9;
         }
 
         svg {
           font-size: 25px;
+        }
+      }
+      @keyframes button {
+        100%{
+          transform: rotate(360deg);
         }
       }
 
@@ -122,6 +129,16 @@
         button {
           min-width: none;
           max-width: none;
+        }
+      }
+
+      .btns-links {
+        button {
+          width: 60px;
+
+          svg {
+            font-size: 20px;
+          }
         }
       }
     }
