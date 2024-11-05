@@ -10,8 +10,8 @@ function App() {
           <h1>Olá, eu sou a Meguinha Fox</h1>
           <p>Transformo projetos em soluções digitais únicas.</p>
           <div className='btns'>
-            <button>SHOW PROFILE</button>
-            <button>KNOW MORE</button>
+            <button style={{background: 'transparent', borderStyle: 'solid', borderWidth: 2, borderColor: '#678e1d', color: '#678e1d'}}>MOSTRAR PERFIL</button>
+            <button>SAIBA MAIS</button>
           </div>
           <div className='btns-links'>
             <button style={{backgroundColor: '#1f2328'}}>

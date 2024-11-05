@@ -36,15 +36,15 @@
       overflow: hidden;
       white-space: nowrap;
       animation: typing 3s steps(30, end);
-      width: 100%;
+      animation-name: typing;
+      animation-duration: 3s;
+      animation-timing-function: steps(30, end);
+      animation-fill-mode: forwards;
+      width: 0%;
     }
 
     @keyframes typing {
-      from {
-        width: 0%;
-      }
-
-      to {
+      100% {
         width: 100%;
       }
     }
@@ -88,8 +88,9 @@
         cursor: pointer;
         transition: .3s ease-in-out;
         animation-name: button;
-        animation-duration: 1.5s;
+        animation-duration: 1s;
         animation-fill-mode: forwards;
+
         &:hover {
           opacity: .9;
         }
@@ -98,9 +99,10 @@
           font-size: 25px;
         }
       }
+
       @keyframes button {
-        100%{
-          transform: rotate(360deg);
+        100% {
+          transform: rotate(1080deg);
         }
       }
 
