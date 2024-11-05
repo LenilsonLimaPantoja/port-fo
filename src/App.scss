@@ -5,163 +5,281 @@
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.home {
-  height: 100vh;
-  width: 100vw;
-  background-color: #050608;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://150698241.v2.pressablecdn.com/portfoliolite-dark/wp-content/uploads/sites/139/2020/08/slider-new.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: auto;
+.App {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
+  flex-direction: column;
+  flex-wrap: wrap;
 
-  .home-container {
-    position: relative;
-    color: #adadad;
+  .home {
+    height: 100vh;
+    // width: 100vw;
+    background-color: #050608;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://150698241.v2.pressablecdn.com/portfoliolite-dark/wp-content/uploads/sites/139/2020/08/slider-new.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
     display: flex;
-    flex-direction: column;
-    row-gap: 40px;
     justify-content: center;
+    align-items: center;
+    padding: 20px;
 
-    h1 {
-      font-size: 65px;
-      text-align: center;
-    }
-
-    p {
-      font-size: 22px;
-      overflow: hidden;
-      white-space: nowrap;
-      animation: typing 3s steps(30, end);
-      animation-name: typing;
-      animation-duration: 3s;
-      animation-timing-function: steps(30, end);
-      animation-fill-mode: forwards;
-      width: 0%;
-    }
-
-    @keyframes typing {
-      100% {
-        width: 100%;
-      }
-    }
-
-    .btns {
+    .home-container {
+      position: relative;
+      color: #adadad;
       display: flex;
-      column-gap: 20px;
-      flex-wrap: wrap;
-      row-gap: 20px;
-
-      button {
-        background-color: #678e1d;
-        height: 50px;
-        flex-grow: 1;
-        max-width: 200px;
-        min-width: 150px;
-        border: none;
-        color: #fff;
-        border-radius: 3px;
-        cursor: pointer;
-        transition: .3s ease-in-out;
-
-        &:hover {
-          opacity: .9;
-        }
-      }
-    }
-
-    .btns-links {
-      display: flex;
-      column-gap: 20px;
-      flex-wrap: wrap;
-      row-gap: 20px;
-
-      button {
-        height: 50px;
-        width: 80px;
-        border: none;
-        color: #fff;
-        border-radius: 3px;
-        cursor: pointer;
-        transition: .3s ease-in-out;
-        animation-name: button;
-        animation-duration: 1s;
-        animation-fill-mode: forwards;
-
-        &:hover {
-          opacity: .9;
-        }
-
-        svg {
-          font-size: 25px;
-        }
-      }
-
-      @keyframes button {
-        100% {
-          transform: rotate(1080deg);
-        }
-      }
-
-      @media (max-width: 1000px) {
-        justify-content: center;
-        align-items: center;
-      }
-    }
-
-    @media (max-width: 1000px) {
-      align-items: center;
-      row-gap: 20px;
+      flex-direction: column;
+      row-gap: 40px;
+      justify-content: center;
 
       h1 {
-        font-size: 32px;
-      }
-
-      p {
-        font-size: 15px;
+        font-size: 65px;
         text-align: center;
       }
 
+      p {
+        font-size: 22px;
+        overflow: hidden;
+        white-space: nowrap;
+        animation: typing 3s steps(30, end);
+        animation-name: typing;
+        animation-duration: 3s;
+        animation-timing-function: steps(30, end);
+        animation-fill-mode: forwards;
+        width: 0%;
+      }
+
+      @keyframes typing {
+        100% {
+          width: 100%;
+        }
+      }
+
       .btns {
-        justify-content: center;
+        display: flex;
+        column-gap: 20px;
+        flex-wrap: wrap;
+        row-gap: 20px;
 
         button {
-          min-width: none;
-          max-width: none;
+          background-color: #678e1d;
+          height: 50px;
+          flex-grow: 1;
+          max-width: 200px;
+          min-width: 150px;
+          border: none;
+          color: #fff;
+          border-radius: 3px;
+          cursor: pointer;
+          transition: .3s ease-in-out;
+
+          &:hover {
+            opacity: .9;
+          }
         }
       }
 
       .btns-links {
+        display: flex;
+        column-gap: 20px;
+        flex-wrap: wrap;
+        row-gap: 20px;
+
         button {
-          width: 60px;
+          height: 50px;
+          width: 80px;
+          border: none;
+          color: #fff;
+          border-radius: 3px;
+          cursor: pointer;
+          transition: .3s ease-in-out;
+          animation-name: button;
+          animation-duration: 1s;
+          animation-fill-mode: forwards;
+
+          &:hover {
+            opacity: .9;
+          }
 
           svg {
-            font-size: 20px;
+            font-size: 25px;
+          }
+        }
+
+        @keyframes button {
+          100% {
+            transform: rotate(1080deg);
+          }
+        }
+
+        @media (max-width: 1000px) {
+          justify-content: center;
+          align-items: center;
+        }
+      }
+
+      @media (max-width: 1000px) {
+        align-items: center;
+        row-gap: 20px;
+
+        h1 {
+          font-size: 32px;
+        }
+
+        p {
+          font-size: 15px;
+          text-align: center;
+        }
+
+        .btns {
+          justify-content: center;
+
+          button {
+            min-width: none;
+            max-width: none;
+          }
+        }
+
+        .btns-links {
+          button {
+            width: 60px;
+
+            svg {
+              font-size: 20px;
+            }
           }
         }
       }
-    }
 
-    .arrow-bottom {
-      display: none;
-      position: fixed;
-      bottom: 100px;
-      left: 50%;
-      color: #adadad;
-      font-size: 30px;
-      animation-name: arrow-bottom;
-      animation-duration: .8s;
-      animation-iteration-count: infinite;
-      animation-direction: alternate;
-    }
+      .arrow-bottom {
+        display: none;
+        position: fixed;
+        bottom: 100px;
+        left: 50%;
+        color: #adadad;
+        font-size: 30px;
+        animation-name: arrow-bottom;
+        animation-duration: .8s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
 
-    @keyframes arrow-bottom {
-      100% {
-        bottom: 50px;
+      @keyframes arrow-bottom {
+        100% {
+          bottom: 50px;
+        }
       }
     }
+  }
+
+  .contato {
+    padding: 20px;
+
+    .contato-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+      row-gap: 50px;
+      flex-wrap: wrap;
+
+      .contato-container-card {
+        display: flex;
+        column-gap: 20px;
+        row-gap: 20px;
+        flex-wrap: wrap;
+
+        .card {
+          display: flex;
+          align-items: center;
+          column-gap: 15px;
+          background-color: #f9f9f9;
+          padding: 20px;
+          border-radius: 3px;
+          flex-grow: 1;
+          min-width: 320px;
+          .span-icone {
+            background-color: #fff;
+            height: 60px;
+            width: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+
+            svg {
+              font-size: 25px;
+              color: #FB5850;
+            }
+          }
+
+          div {
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+
+            span {
+              background-color: transparent;
+            }
+
+            .span-n {
+              font-weight: bold;
+            }
+          }
+        }
+      }
+
+      h1 {
+        font-size: 50px;
+        text-align: center;
+      }
+
+      form {
+        width: 1000px;
+        display: flex;
+        row-gap: 20px;
+        flex-direction: column;
+
+        .input-group {
+          flex-grow: 1;
+          display: flex;
+          column-gap: 20px;
+
+          input,
+          textarea {
+            flex-grow: 1;
+            height: 50px;
+            padding: 10px;
+            outline: none;
+            background-color: #f9f9f9;
+            border: none;
+            border-radius: 3px;
+            font-size: 15px;
+          }
+
+          textarea {
+            height: 100px;
+          }
+        }
+
+        button {
+          background-color: #E79575;
+          height: 50px;
+          border: none;
+          border-radius: 3px;
+          color: #fff;
+          font-size: 15px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  footer{
+    background-color: #050608;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
